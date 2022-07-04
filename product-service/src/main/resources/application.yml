@@ -1,0 +1,40 @@
+# HTTP Server (Tomcat) Port
+server: 
+  port: 8082
+  
+### Spring properties
+# Service registers under this name
+spring:
+  application:
+    name: product-service
+  datasource:
+    url: jdbc:h2:mem:ecommdb
+  jpa:
+    show-sql: true
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create
+  h2:
+    console:
+      enabled: true
+  sleuth:
+    sampler:
+      percentage: 1.0
+    enabled: true
+  zipkin:
+     # When enabled=false, traces log to the console. Comment to send to zipkin
+     base-url: http://localhost:9411/
+     enabled: true
+     
+# Discovery Server Access
+eureka:
+    client:
+      serviceUrl:
+        defaultZone: http://localhost:8761/eureka/
+
+
+# Disable Spring Boot's "Whitelabel" default error page, so we can use our own
+error:
+  whitelabel:
+    enabled: false
+

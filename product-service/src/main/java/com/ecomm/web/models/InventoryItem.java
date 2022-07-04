@@ -1,0 +1,20 @@
+package com.ecomm.web.models;
+
+public class InventoryItem {
+    private String productCode;
+    private Integer availableQuantity = 0;
+    
+	public String getProductCode() {
+		return productCode;
+	}
+	public void setProductCode(String productCode) {
+		this.productCode = productCode;
+	}
+	public Integer getAvailableQuantity() {
+		return availableQuantity;
+	}
+	public void setAvailableQuantity(Integer availableQuantity) {
+		this.availableQuantity = availableQuantity;
+	}
+    
+}
