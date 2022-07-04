@@ -1,5 +1,3 @@
-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
-
 # Microservics Architecture
 This is sample for Microservice eComm application
 
